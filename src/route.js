@@ -9,12 +9,13 @@ import Profile from "./component/pages/Profile";
 import CreatePost from "./component/pages/CreatePost";
 import Allpost from "./component/pages/Allpost";
 import Aboutus from "./component/pages/Aboutus";
+import Termandpolicy from "./component/pages/Termandpolicy";
 
 const route = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/landing">
+        <Route exact path="/">
           <Landing />
         </Route>
         <Route exact path="/footer">
@@ -37,6 +38,9 @@ const route = () => {
         </Route>
         <Route exact path="/aboutus">
           <Aboutus />
+        </Route>
+        <Route exact path="/terms">
+        <Termandpolicy/>
         </Route>
       </Switch>
     </>

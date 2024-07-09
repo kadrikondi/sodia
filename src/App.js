@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Approute from "./route";
 import Footer from "./component/layout/Footer";
 import Header from "./component/layout/Header";
+import Termandpolicy from "./component/pages/Termandpolicy";
 function App() {
   return (
     // <div className="App">
@@ -15,6 +16,15 @@ function App() {
     //   </Router>
     // </div>
     <div className="App">
+      {/* <header className="app-header">
+        <h1>Welcome to Sodia</h1>
+      </header>
+      <main className="app-main">
+        <Termandpolicy />
+      </main>
+      <footer className="app-footer">
+        <p>&copy; 2024 Sodia. All Rights Reserved.</p>
+      </footer> */}
       <Router>
         <Header />
         <Switch>
@@ -25,4 +35,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
