@@ -14,7 +14,7 @@ const route = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/landing">
+        <Route exact path="/">
           <Landing />
         </Route>
         <Route exact path="/footer">
