@@ -3,7 +3,9 @@ import "./Termandpolicy";
 
 const Termandpolicy = () => {
   return (
-  <div className="terms-and-policy">
+  <div className="term-and-policy">
+    <div style={styles.container}>
+      
       <h2>Terms and Conditions</h2>
       <p>
         Welcome to Sodia! These terms and conditions outline the rules and regulations for the use of Sodia's website, located at www.sodia.com.
@@ -11,6 +13,14 @@ const Termandpolicy = () => {
       <p>
         By accessing this website, we assume you accept these terms and conditions. Do not continue to use Sodia's website if you do not agree to take all of the terms and conditions stated on this page.
       </p>
+      <h5>You must not</h5>
+      <ul>
+        <li>Republish material from Sodia</li>
+        <li>Sell, rent or sub-license material from Sodia</li>
+        <li>Reproduce, duplicate or copy material from Sodia</li>
+        <li>Redistribute content from Sodia</li>
+      </ul>
+
       
       <h3>Cookies</h3>
       <p>
@@ -26,6 +36,7 @@ const Termandpolicy = () => {
       <p>
         You are specifically restricted from all of the following:
       </p>
+    
       <ul>
         <li>publishing any Sodia material in any other media</li>
         <li>selling, sublicensing, and/or otherwise commercializing any Sodia material</li>
@@ -34,6 +45,7 @@ const Termandpolicy = () => {
         <li>using this website in any way that impacts user access to this website</li>
         <li>using this website contrary to applicable laws and regulations, or in any way may cause harm to the website, or to any person or business entity</li>
       </ul>
+      
       
       <h3>Disclaimer</h3>
       <p>
@@ -55,14 +67,44 @@ const Termandpolicy = () => {
         These terms and conditions constitute the entire agreement between Sodia and you in relation to your use of this website and supersede all prior agreements and understandings.
       </p>
       
-      <h2>Privacy Policy</h2>
+      <h3>Privacy Policy</h3>
       <p>
         For more information about how we collect, use, and disclose your information, please read our Privacy Policy.
       </p>
+      <h3>Contact Information</h3>
+      <p>If you have any questions or concerns regarding our terms and policies, please feel free to contact us at:</p>
+      <span>Sodia@media.com</span>
+
+      </div>
     </div>
+    
     );
   };
 
+  const styles = {
+    container: {
+        width: '100%',
+        maxWidth: '600px',
+        margin: '0 auto',
+        padding: '20px',
+        backgroundColor: 'purple',
+        border: '1px solid #ccc',
+        borderRadius: '8px',
+        color: 'white',
+        fontsize: '20px',
+
+    },
+    code: {
+        fontFamily: 'Courier New, Courier, monospace',
+        fontSize: '14px',
+        color: '#333',
+        // whiteSpace: 'pre-wrap',
+
+
+        
+    },
+};
+ 
 
   
 
