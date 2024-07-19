@@ -37,7 +37,8 @@ const Termandpolicy = () => {
         You are specifically restricted from all of the following:
       </p>
     
-      <ul>
+      <ul
+      >
         <li>publishing any Sodia material in any other media</li>
         <li>selling, sublicensing, and/or otherwise commercializing any Sodia material</li>
         <li>publicly performing and/or showing any Sodia material</li>
