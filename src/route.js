@@ -10,8 +10,10 @@ import CreatePost from "./component/pages/CreatePost";
 import Allpost from "./component/pages/Allpost";
 import Aboutus from "./component/pages/Aboutus";
 import Termandpolicy from "./component/pages/Termandpolicy";
+import Chat from "./component/pages/ChatApp";
 
 const route = () => {
+  
   return (
     <>
       <Switch>
@@ -41,6 +43,9 @@ const route = () => {
         </Route>
         <Route exact path="/terms">
         <Termandpolicy/>
+        </Route>
+        <Route exact path="/chat">
+        <Chat/>
         </Route>
       </Switch>
     </>
