@@ -11,6 +11,7 @@ import Allpost from "./component/pages/Allpost";
 import Aboutus from "./component/pages/Aboutus";
 import Termandpolicy from "./component/pages/Termandpolicy";
 import Chat from "./component/pages/ChatApp";
+import Login from "./component/pages/Login";
 
 const route = () => {
   
@@ -19,6 +20,9 @@ const route = () => {
       <Switch>
         <Route exact path="/">
           <Landing />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route exact path="/footer">
           <Footer />
