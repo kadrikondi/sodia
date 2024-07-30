@@ -88,7 +88,7 @@ const Termandpolicy = () => {
         maxWidth: '600px',
         margin: '0 auto',
         padding: '20px',
-        backgroundColor: 'purple',
+        backgroundColor: '#581c87 ',
         border: '1px solid #ccc',
         borderRadius: '8px',
         color: 'white',

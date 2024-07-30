@@ -18,6 +18,7 @@ function App() {
     // </div> 
       <Router>
         <Header />
+        
         <Switch>
           <Route path="/" component={Approute} />
         </Switch>
