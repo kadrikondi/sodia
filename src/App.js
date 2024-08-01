@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import Button from "react-bootstrap/Button";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Approute from "./route";
 import Footer from "./component/layout/Footer";
