@@ -2,6 +2,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import {Row,Col} from "react-bootstrap";
+import girl from "../asset/image/girl.webp";
+import man from "../asset/image/man.webp";
 
 
 const Chat = () => {
@@ -41,7 +43,7 @@ const Chat = () => {
                     </p>
                   </div>
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                    src={girl}
                     alt="avatar 1"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -49,7 +51,7 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-start mb-4">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                    src={man}
                     alt="avatar 2"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -88,7 +90,7 @@ const Chat = () => {
                     </p>
                   </div>
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                    src={girl}
                     alt="avatar 1"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -96,7 +98,7 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-start mb-4">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                    src={man}
                     alt="avatar 2"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -123,7 +125,7 @@ const Chat = () => {
                     </p>
                   </div>
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                    src={girl}
                     alt="avatar 1"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -131,7 +133,7 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-start mb-4">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                    src={man}
                     alt="avatar 2"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -158,7 +160,7 @@ const Chat = () => {
                     </p>
                   </div>
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                    src={girl}
                     alt="avatar 1"
                     style={{ width: "45px", height: "100%" }}
                   />
@@ -166,7 +168,7 @@ const Chat = () => {
                 </div>       
             <div className="text-muted d-flex justify-content-start align-items-center p-3">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                src={man}
                 alt="avatar 2"
                 style={{ width: "45px", height: "100%" }}
               />
