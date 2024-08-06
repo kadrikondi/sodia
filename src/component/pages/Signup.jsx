@@ -1,21 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from 'country-list';
 import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
-
+import axios from "axios"
 const Signup = () => {
   const [countries, setCountries] = useState([]);
   const [gender, setGender] = useState('');
   const history = useHistory(); 
-
+  const[username,setUsername]= useState("")
+  const [password,setPassword] = useState("")
+  const[email,setEmail]= useState("")
   useEffect(() => {
     const countries = getData().map(country => country.name);
     setCountries(countries);
   }, []);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    alert('Account creation successful');
-    history.push('/landing'); 
+    try{
+      const response = await axios.post("http://localhost:3500/user/signup",
+        {
+          username,
+          password,
+          email
+        }
+      )
+      if(response.status=== 200){
+        alert("User Created Successfully")
+      }
+    }catch(err){
+      if (err.response.data ==  "User already exist"){
+        alert("User already exist")
+      }else if(err.response.data == "email already exist"){
+        alert("Email already exist")
+      }
+    }
   };
 
   return (
@@ -34,6 +52,8 @@ const Signup = () => {
               type="text"
               className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm sm:text-sm"
               placeholder="Input your name"
+              value={username}
+              onChange={(e)=>setUsername(e.target.value)}
               required
             />
           </div>
@@ -57,6 +77,8 @@ const Signup = () => {
               className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm sm:text-sm"
               placeholder="Input your Email Address"
               required
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
             />
           </div>
 
@@ -81,6 +103,8 @@ const Signup = () => {
               className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm sm:text-sm"
               placeholder="Input your password"
               required
+              value={password}
+              onChange={(e)=>setPassword(e.target.value)}
             />
           </div>
 
