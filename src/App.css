@@ -1,4 +1,122 @@
-
-
-
+.landing-page {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #4A148C, WHITE);
+  animation: gradient-animation 5s ease infinite;
+  background-size: 180%;
+ 
   
+ 
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+} 
+/* 
+.stories-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: right;
+  position: sticky;
+  
+} */
+.stories-section {
+  padding: 20px;
+  position: sticky;
+  background-color: #4A148C;
+  top: 0;
+
+  z-index: 10;
+  border-bottom: 1px  #ccc;
+}
+
+
+.content-wrapper {
+  display: flex;
+  padding: 20px;
+}
+
+/* Default styles for larger screens */
+.sidebar {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; 
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feed-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+.friends-list-container {
+  width: 300px;
+  margin-top: 20px;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+  .landing-page{
+    max-width: 100%;
+  }
+  .sidebar {
+      width: 20px; /* Reduce sidebar width */
+      margin-right: 2px; /* Reduce margin */
+  }
+  .sidebar-section h4 {
+      margin-right: 10px;
+      font-size: 14px;
+  }
+  .sidebar-icon {
+      margin-left: -15px;
+  }
+
+  .main-content {
+      flex-direction: row; /* Stack feed and friends list vertically */
+  }
+
+  .feed-container {
+      max-width: none; /* Allow feed to use full width */
+  }
+
+  .friends-list-container {
+      display: none; /* Hide friends list on small screens */
+  }
+}
+
+.post {
+  border: 1px solid #880ED4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}

@@ -12,6 +12,11 @@ import Aboutus from "./component/pages/Aboutus";
 import Termandpolicy from "./component/pages/Termandpolicy";
 import Chat from "./component/pages/ChatApp";
 import Login from "./component/pages/Login";
+import Feed from './component/pages/feed';
+import Stories from './component/pages/stories';
+import FriendsList from './component/pages/friendslist';
+import Sidebar from './component/pages/sidebar';
+import { posts, stories, friends } from './component/pages/Dummydata';
 
 const route = () => {
   
@@ -51,9 +56,38 @@ const route = () => {
         <Route exact path="/chat">
         <Chat/>
         </Route>
+        <Route exact path="/feed">
+        <Feed posts={posts}/>
+        </Route>
+        <Route exact path="/stories">
+        <Stories stories ={stories}/>
+        </Route>
+        <Route exact path="/friendslist">
+        <FriendsList  friends={friends}/>
+        </Route>
+        <Route exact path="/sidebar">
+        <Sidebar/>
+         </Route>
+         
       </Switch>
     </>
   );
 };
+
+// {/* <div className="App">
+// <Stories stories={stories} />
+// <div className="content-wrapper">
+//   <Sidebar />
+//   <div className="main-content">
+//     <div className="feed-container">
+//       <Feed posts={posts} />
+//     </div>
+//     <div className="friends-list-container">
+//       <FriendsList friends={friends} />
+//     </div>
+//   </div>
+// </div>
+// </div> */}
+
 
 export default route;

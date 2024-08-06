@@ -1,0 +1,26 @@
+/* src/Sidebar.css */
+.sidebar {
+    width: 200px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #880ED4;
+    background-color: inherit;
+    height: fit-content;
+  }
+  
+  .sidebar-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+  
+  .sidebar-icon {
+    margin-right: 10px;
+  }
+  
+  .sidebar-section h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  

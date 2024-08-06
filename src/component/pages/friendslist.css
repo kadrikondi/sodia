@@ -1,0 +1,39 @@
+/* src/FriendsList.css */
+.friends-list-container {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  .friends-list {
+    padding: 20px;
+    border: 1px solid #880ED4;
+    background-color:inherit;
+    height: calc(100vh - 40px); /* Adjust height to fit the viewport minus padding */
+    overflow-y: auto;
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .friend-avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .friend h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .friend p {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+  }
+  
