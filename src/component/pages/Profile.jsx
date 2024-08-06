@@ -6,18 +6,18 @@ import post3 from "../asset/image/poll3.jpg"
 import post4 from "../asset/image/poll4.jpg"
 
 const Profile = () => {
-  const post = [post1, post2, post3, post4];
-  return <div className="container"> 
-      <div className="max-w-3xl mx-auto mt-10">
+  const post = [post1, post2, post3, post4,post1, post2, post3, post4,post1, post2, post3, post4];
+  return <div className="container m-3"> 
+      <div className="max-w-3xl mx-auto mt-10 font text-purple-900">
       <div className="flex items-center space-x-4">
         <img
           src={photo1}
           alt=""
-          className="w-24 h-24 rounded-full border "
+          className="w-24 h-24 rounded-full  "
         />
         <div>
           <h1 className="text-2xl font-semibold">Username</h1>
-          <p className="text-gray-600">@username</p>
+          <p className="">@username</p>
         </div>
       </div>
       <div className="mt-6 ">
@@ -34,13 +34,14 @@ const Profile = () => {
         </div>
         <p className="mt-4">Bio: This is a sample bio of the user.</p>
       </div>
-      <div className="mt-6 grid grid-cols-3 gap-4">
+
+      <div className="mt-6 grid grid-cols-3 gap-1  ">
         {post.map((post, index) => (
           <img
             key={index}
             src={post}
             alt={`Post ${index + 1}`}
-            className="w-full h-32 object-cover"
+            className="w-full h-32 object-cover border-3 border-purple-900 "
           />
         ))}
       </div>
