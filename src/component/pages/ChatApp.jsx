@@ -14,7 +14,7 @@ const Chat = () => {
       <Row className="d-flex justify-content-center">
         <Col md="10" lg="8" xl="6">
           <Card id="chat2" style={{ borderRadius: "10px" }}>
-          <p style={{backgroundColor:"purple"}} className="lg p-3 me-3 mb-1 text-white rounded-3 d-flex flex-row justify-content-center">
+          <p style={{backgroundColor:"#581c87"}} className="lg p-3 me-3 mb-1 text-white rounded-3 d-flex flex-row justify-content-center">
                 Andrew Work  
               </p>
              <div className="CardBody">
@@ -29,13 +29,13 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-end mb-4 pt-1">
                   <div>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3 ">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3 ">
                       Hiii, I'm good.
                     </p>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       How are you doing?
                     </p>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       Long time no see! Tomorrow office. will be free on sunday.
                     </p>
                     <p className="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
@@ -58,13 +58,13 @@ const Chat = () => {
                   <div>
                     <p
                       className="small p-2 ms-3 mb-1 text-white rounded-3"
-                      style={{backgroundColor:"purple"}}
+                      style={{backgroundColor:"#581c87"}}
                     >
                       Okay
                     </p>
                     <p
                       className="small p-2 ms-3 mb-1 text-white rounded-3"
-                      style={{backgroundColor:"purple"}}
+                      style={{backgroundColor:"#581c87"}}
                     >
                       We will go on Sunday?
                     </p>
@@ -76,13 +76,13 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-end mb-4">
                   <div>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       That's awesome!
                     </p>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       I will meet you Sandon Square sharp at 10 AM
                     </p>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       Is that okay?
                     </p>
                     <p className="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
@@ -105,7 +105,7 @@ const Chat = () => {
                   <div>
                     <p
                       className="small p-2 ms-3 mb-1 text-white rounded-3"
-                      style={{backgroundColor:"purple"}}
+                      style={{backgroundColor:"#581c87"}}
                     >
                       Okay i will meet you on Sandon Square
                     </p>
@@ -117,7 +117,7 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-end mb-4">
                   <div>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       Do you have pictures of my last Visit?
                     </p>
                     <p className="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
@@ -140,7 +140,7 @@ const Chat = () => {
                   <div>
                     <p
                       className="small p-2 ms-3 mb-1 text-white rounded-3"
-                      style={{backgroundColor:"purple"}}
+                      style={{backgroundColor:"#581c87"}}
                     >
                       Sorry I don't have. i changed my phone.
                     </p>
@@ -152,7 +152,7 @@ const Chat = () => {
 
                 <div className="d-flex flex-row justify-content-end">
                   <div>
-                    <p style={{backgroundColor:"purple"}} className="small p-2 me-3 mb-1 text-white rounded-3">
+                    <p style={{backgroundColor:"#581c87"}} className="small p-2 me-3 mb-1 text-white rounded-3">
                       Okay then see you on sunday!!
                     </p>
                     <p className="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
