@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from 'country-list';
-import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
+import { useHistory } from 'react-router-dom'; 
 import axios from "axios"
 const Signup = () => {
   const [countries, setCountries] = useState([]);
@@ -9,6 +9,8 @@ const Signup = () => {
   const[username,setUsername]= useState("")
   const [password,setPassword] = useState("")
   const[email,setEmail]= useState("")
+  const[country,setCountry] = useState("")
+  const[tel,setTel] = useState("")
   useEffect(() => {
     const countries = getData().map(country => country.name);
     setCountries(countries);
@@ -21,11 +23,15 @@ const Signup = () => {
         {
           username,
           password,
-          email
+          email,
+          country,
+          tel,
+          gender,
         }
       )
       if(response.status=== 200){
         alert("User Created Successfully")
+        history.push("/login")
       }
     }catch(err){
       if (err.response.data ==  "User already exist"){
@@ -83,17 +89,19 @@ const Signup = () => {
           </div>
 
           <div>
-            <label className="block text-purple-900 font-bold">Country</label>
-            <select
-              id="country"
-              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-              required
-            >
-              {countries.map((country, index) => (
-                <option key={index} value={country}>{country}</option>
-              ))}
-            </select>
-          </div>
+      <label className="block text-purple-900 font-bold">Country</label>
+      <select
+        id="country"
+        className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+        value={country}
+        onChange={(e) => setCountry(e.target.value)} 
+      >
+        <option value="" disabled>Select a country</option>
+        {countries.map((country, index) => (
+          <option key={index} value={country}>{country}</option>
+        ))}
+      </select>
+    </div>
 
           <div>
             <label className="block text-purple-900 font-bold">Password</label>
@@ -117,6 +125,7 @@ const Signup = () => {
                   name="gender"
                   value="Male"
                   className="mr-2"
+                  checked={gender === 'Male'}
                   onChange={(e) => setGender(e.target.value)}
                 />
                 Male
@@ -127,6 +136,7 @@ const Signup = () => {
                   name="gender"
                   value="Female"
                   className="mr-2"
+                  checked={gender === 'Female'}
                   onChange={(e) => setGender(e.target.value)}
                 />
                 Female
@@ -137,6 +147,7 @@ const Signup = () => {
                   name="gender"
                   value="Other"
                   className="mr-2"
+                  checked={gender === 'Other'}
                   onChange={(e) => setGender(e.target.value)}
                 />
                 Other

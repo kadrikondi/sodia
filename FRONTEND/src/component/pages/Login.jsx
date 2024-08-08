@@ -1,16 +1,29 @@
 import React, { useState } from 'react';
-
-
+import { useHistory } from 'react-router-dom'; 
+import axios from 'axios';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
-    const handleLogin = (event) => {
+    const history = useHistory(); 
+    const handleLogin = async (event) => {
         event.preventDefault();
-        // Handle login logic here
-        console.log('Username:', username);
-        console.log('Password:', password);
+        try {
+            const response = await axios.post('http://localhost:3500/user/login', {
+                username,
+                password
+            });
+            if (response.status === 200) {
+                alert("Login Successful")
+               history.push('/landing')
+            }
+        } catch (err) {
+            if (err.response) {
+                alert(err.response.data.message); 
+            } else {
+                alert("An error occurred. Please try again.");
+            }
+        }
     };
 
     return (

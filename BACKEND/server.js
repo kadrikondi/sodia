@@ -15,9 +15,10 @@ connectDB()
 const PORT = process.env.PORT || 3500
 
 mongoose.connection.on("open", () => {
-    console.log("Mongodb Connected")
+    console.log("Mongodb Connected");
+
     app.listen(PORT, (err) => {
-        if (err) throw err
-        console.log("PORT is alreeady running on " + PORT)
-    })
-})
+        if (err) throw err;
+        console.log("Server is running on port " + PORT);
+    });
+});
