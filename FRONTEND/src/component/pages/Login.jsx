@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'; 
 import axios from 'axios';
-
+import swal from 'sweetalert';
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
     const history = useHistory(); 
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -14,14 +15,14 @@ const Login = () => {
                 password
             });
             if (response.status === 200) {
-                alert("Login Successful")
+                swal("Login Successful", "You can now access your account", "success")
                history.push('/landing')
             }
         } catch (err) {
             if (err.response) {
-                alert(err.response.data.message); 
+                    swal("An error occurred. Please try again.","Please check your details once more","error");
             } else {
-                alert("An error occurred. Please try again.");
+                swal("An error occurred. Please try again.","Please check your details once more","error");
             }
         }
     };

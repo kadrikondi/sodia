@@ -1,6 +1,7 @@
 import User from "../model/User.js";
 import bcrypt from "bcrypt";
 
+import jsonwebtoken from "jsonwebtoken";
 const handleLogin = async (req, res) => {
     const { username, password } = req.body;
 
@@ -12,9 +13,13 @@ const handleLogin = async (req, res) => {
        
         const match = await bcrypt.compare(password, user.password);
         if (!match) return res.status(400).json("Invalid username or password");
-
-        
-        res.status(200).json("Login successful");
+        const access_token = await jsonwebtoken.sign(
+            
+            {username: user.username},
+            process.env.ACCESS_SECRET,
+            { expiresIn: "30s" }
+        )
+        res.status(200).json(access_token);
     } catch (error) {
         console.error("Error during login:", error);
         res.status(500).json("Internal server error");

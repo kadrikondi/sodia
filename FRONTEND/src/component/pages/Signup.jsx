@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getData } from 'country-list';
 import { useHistory } from 'react-router-dom'; 
+import swal from 'sweetalert';
 import axios from "axios"
 const Signup = () => {
   const [countries, setCountries] = useState([]);
@@ -30,14 +31,14 @@ const Signup = () => {
         }
       )
       if(response.status=== 200){
-        alert("User Created Successfully")
+        swal("User Created Successfully","You can login now","success",)
         history.push("/login")
       }
     }catch(err){
       if (err.response.data ==  "User already exist"){
-        alert("User already exist")
+        swal("User already exist","check your details","error")
       }else if(err.response.data == "email already exist"){
-        alert("Email already exist")
+        swal("Email already exist","Please enter a valid email","error")
       }
     }
   };
@@ -72,6 +73,8 @@ const Signup = () => {
               className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm sm:text-sm"
               placeholder="Input your Phone Number"
               required
+              value={tel}
+              onChange={(e)=>setTel(e.target.value)}
             />
           </div>
 

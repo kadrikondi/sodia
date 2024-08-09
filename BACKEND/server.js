@@ -10,8 +10,9 @@ dotenv.config()
 const app = express()
 app.use(cors())
 app.use(express.json());
-app.use("/user", router)
 connectDB()
+app.use("/user", router)
+
 const PORT = process.env.PORT || 3500
 
 mongoose.connection.on("open", () => {
