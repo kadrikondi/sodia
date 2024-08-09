@@ -1,0 +1,47 @@
+/* footer.css */
+
+.footer {
+  background-color: #581c87;
+  color: #fff;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.footer-content h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-content p {
+  margin-bottom: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+small {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Hide the footer on small screens */
+@media only screen and (max-width: 968px) {
+  .footer a {
+    display: none;
+  }
+}

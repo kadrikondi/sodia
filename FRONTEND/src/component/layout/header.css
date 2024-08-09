@@ -1,0 +1,30 @@
+/* header.css */
+
+/* General Navbar Styles */
+.header {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* .me-auto Nav.Link{
+  padding: 2rem;
+} */
+#nav .nav-link {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+#nav .nav-link:hover {
+  color: #ccc;
+}
+
+.bg-body-tertiary #nav {
+  background-color: #581c87 !important;
+  margin: -0.5rem -0.0rem;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 992px) {
+  #nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
